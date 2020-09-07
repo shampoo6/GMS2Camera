@@ -1,1 +1,1 @@
-# GMS2TilesCamera
+# GMS2Camera
