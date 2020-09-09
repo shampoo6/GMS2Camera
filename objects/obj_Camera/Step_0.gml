@@ -12,6 +12,29 @@ if(shake_duration > 0){
 	must_update_view = true;
 }
 
-if(instance_exists(target)) {
+// 跟踪目标、平移、lerp移动 只能同时执行一个逻辑
+
+// 跟踪逻辑
+if(instance_exists(target) && !moving && !lerping) {
+	x = lerp(x, target.x, followLerpSpeed);
+	y = lerp(y, target.y, followLerpSpeed);
+	must_update_view = true;
+}
+
+// 平移逻辑
+if(moving && !instance_exists(target) && !lerping) {
+	var dir = point_direction(x, y, expectX, expectY);
+	motion_set(dir, moveSpeed * delta_time * 0.000001);
+	must_update_view = true;
+}
+
+// lerp逻辑
+if(lerping && !instance_exists(target) && !moving) {
+	var _x = lerp(x, expectX, lerpRate);
+	var _y = lerp(y, expectY, lerpRate);
+	_x = abs(_x - expectX) < deadzone? expectX: _x;
+	_y = abs(_y - expectY) < deadzone? expectY: _y;
+	x = _x;
+	y = _y;
 	must_update_view = true;
 }

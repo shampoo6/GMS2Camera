@@ -2,6 +2,9 @@
 
 #region 初始化相机属性
 
+// 是否忽略边框
+ignoreBound = false;
+
 // 相机旋转
 cam_rot = 0;
 // 相机上方向向量x
@@ -14,8 +17,11 @@ cam_zoom = 1;
 viewWidth = tileWidth * blocksWidth;
 viewHeight = tileHeight * blocksHeight;
 
-x = viewWidth * 0.5;
-y = viewHeight * 0.5;
+halfWidth = viewWidth * 0.5;
+halfHeight = viewHeight * 0.5;
+
+x = halfWidth;
+y = halfHeight;
 z = -100;
 
 #endregion
@@ -44,5 +50,22 @@ shake_duration = 0;
 
 position_offset_x = 0;
 position_offset_y = 0;
+
+#endregion
+
+#region 定义move移动属性
+
+deadzone = 1;
+expectX = 0;
+expectY = 0;
+moving = false;
+moveSpeed = 0;
+
+#endregion
+
+#region 定义lerp移动属性
+
+lerping = false;
+lerpRate = 1;
 
 #endregion

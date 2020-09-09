@@ -29,3 +29,34 @@ if(keyboard_check(ord("C"))){
 }
 
 #endregion
+
+#region 移动相机
+
+if(keyboard_check(ord("M"))){
+	gms2CameraStopFollow(obj_Camera);
+	//gms2CameraMove(obj_Camera, 300, 133, 64, false);
+	gms2CameraMove(obj_Camera, 400, 200, 64, false);
+}
+if(keyboard_check(ord("L"))){
+	gms2CameraStopFollow(obj_Camera);
+	//gms2CameraLerp(obj_Camera, 300, 133, 0.02, false);
+	gms2CameraLerp(obj_Camera, 400, 200, 0.02, true);
+}
+
+#endregion
+
+#region 跟踪目标
+
+if(keyboard_check(ord("F"))){
+	gms2CameraFollow(obj_Camera, obj_PlayerToken);
+}
+
+#endregion
+
+#region 摇晃
+
+if(keyboard_check(ord("B"))){
+	gms2CameraShake(obj_Camera, 16, 3);
+}
+
+#endregion
