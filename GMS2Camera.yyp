@@ -7,6 +7,7 @@
     {"id":{"name":"spr_PlayerToken","path":"sprites/spr_PlayerToken/spr_PlayerToken.yy",},"order":1,},
     {"id":{"name":"obj_BoundToken","path":"objects/obj_BoundToken/obj_BoundToken.yy",},"order":0,},
     {"id":{"name":"gms2CameraSetRotate","path":"scripts/gms2CameraSetRotate/gms2CameraSetRotate.yy",},"order":1,},
+    {"id":{"name":"gms2CameraSetController","path":"scripts/gms2CameraSetController/gms2CameraSetController.yy",},"order":8,},
     {"id":{"name":"gms2CameraStopFollow","path":"scripts/gms2CameraStopFollow/gms2CameraStopFollow.yy",},"order":7,},
     {"id":{"name":"obj_CameraController","path":"objects/obj_CameraController/obj_CameraController.yy",},"order":0,},
     {"id":{"name":"gms2CameraShake","path":"scripts/gms2CameraShake/gms2CameraShake.yy",},"order":3,},

@@ -30,8 +30,10 @@ if(must_update_view){
 			moving = false;
 			lerping = false;
 			ignoreBound = false;
-			// todo 发起移动结束事件
-			show_debug_message("相机移动完成")
+			// 发起移动结束事件
+			if instance_exists(controller) {
+				event_perform_object(controller, ev_other, ev_user0);
+			}
 		}
 	}
 }
