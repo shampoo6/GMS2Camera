@@ -55,7 +55,7 @@ position_offset_y = 0;
 
 #region 定义move移动属性
 
-deadzone = 1;
+deadzone = 5;
 expectX = 0;
 expectY = 0;
 moving = false;

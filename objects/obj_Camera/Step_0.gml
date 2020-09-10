@@ -23,8 +23,15 @@ if(instance_exists(target) && !moving && !lerping) {
 
 // 平移逻辑
 if(moving && !instance_exists(target) && !lerping) {
-	var dir = point_direction(x, y, expectX, expectY);
-	motion_set(dir, moveSpeed * delta_time * 0.000001);
+	// 如果起始点和结束点间的距离，下一帧就能达到，那么就将当前位置设置为最终期望位置
+	var dis = point_distance(x, y, expectX, expectY);
+	if (dis <= moveSpeed * delta_time * 0.000001) {
+		x = expectX;
+		y = expectY;
+	} else {
+		var dir = point_direction(x, y, expectX, expectY);
+		motion_set(dir, moveSpeed * delta_time * 0.000001);
+	}
 	must_update_view = true;
 }
 
