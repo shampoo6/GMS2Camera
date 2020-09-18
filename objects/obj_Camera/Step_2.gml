@@ -31,9 +31,7 @@ if(must_update_view){
 		camera_set_view_mat(camera, _view_mat);
 			
 		// 发起移动结束事件
-		if instance_exists(controller) {
-			event_perform_object(controller, ev_other, ev_user0);
-		}
+		gms2ESSendEvent("CameraMoveDone", noone);
 	}
 	else {
 		var _x = x + position_offset_x;
