@@ -1,8 +1,10 @@
 # GMS2Camera
 GMS2简易相机
 
-## 可配置参数如下
-![](.README_images/05a888f5.png)
+## 参考
+
+### 配置项
+![](.README_images/option.png)
 
 名称 | 功能
 --- | ---
@@ -14,8 +16,9 @@ tileHeight | tile的高
 blocksWidth | 希望相机显示多少个tile的宽
 blocksHeight | 希望相机显示多少个tile的高
 followLerpSpeed | 跟踪系数，有效值为0~1之间的数，为1的话就是没有过度动画直接设置到跟踪对象的位置
+deadzone | 相机移动的死区，进入死区后相机会直接移动到目的地
 
-## 方法
+### 方法
 #### 跟踪目标
 ```gms2CameraFollow(cam, target)```
 

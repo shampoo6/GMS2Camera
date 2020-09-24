@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "GMS2Camera",
-    "path": "folders/Objects/GMS2Camera.yy",
+    "name": "Example",
+    "path": "folders/Objects/GMS2Camera/Example.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_PlayerToken",
