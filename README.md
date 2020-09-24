@@ -1,10 +1,13 @@
 # GMS2Camera
 GMS2简易相机
 
+## 使用
+将 `obj_Camera` 拖入场景中，然后填写对应的配置即可。
+
 ## 参考
 
 ### 配置项
-![](.README_images/option.png)
+![](.README_images/options.png)
 
 名称 | 功能
 --- | ---
